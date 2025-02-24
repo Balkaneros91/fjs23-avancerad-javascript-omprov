@@ -1,7 +1,6 @@
-// 5. (2p) En lista med böcker och  priser 
+// 5. (2p) En lista med böcker och  priser
 // Skriv klart funktionen calculateTotalPrice som tar en array med produkter och returnerar det totala priset
-// Använd reduce 
-
+// Använd reduce
 
 const booksInCart = [
   { title: "The Hobbit", author: "J.R.R. Tolkien", price: 15 },
@@ -11,13 +10,12 @@ const booksInCart = [
   { title: "Moby Dick", author: "Herman Melville", price: 22 },
 ];
 
-  
-  function calculateTotalBookPrice(cart) {
-    // Din kod här
+function calculateTotalBookPrice(cart) {
+  // Din kod här
+  return booksInCart.reduce(function (sum, price) {
+    return sum + price.price;
+  }, 0);
+}
 
-  }
-  
-
-  // Test
-  console.log(`$${calculateTotalBookPrice(booksInCart)}`);// Ska logga:  $77
-  
+// Test
+console.log(`$${calculateTotalBookPrice(booksInCart)}`); // Ska logga:  $77
